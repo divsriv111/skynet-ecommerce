@@ -1,13 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31815.197
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{81700B84-A4BC-469D-9DD8-A934034E5657}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{81700B84-A4BC-469D-9DD8-A934034E5657}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{77C67FC2-67C6-47E0-8B24-A4C3E3729182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{77C67FC2-67C6-47E0-8B24-A4C3E3729182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{7093C5B2-0F96-4AFC-8092-B927B49E9762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{7093C5B2-0F96-4AFC-8092-B927B49E9762}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DD377673-D7A6-48BA-8037-899D6079441B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{96EBB8AD-5BB1-4AD2-A2CE-BEC073F104A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{B232EF9F-6487-44DB-B1C2-4D556CB8B6BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{CACA5330-4161-4F26-AB5C-2EFF398C5536}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{18691074-EB12-4169-A9FD-CDE14313AE61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{81700B84-A4BC-469D-9DD8-A934034E5657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +65,17 @@ Global
 		{7093C5B2-0F96-4AFC-8092-B927B49E9762}.Release|x64.Build.0 = Release|Any CPU
 		{7093C5B2-0F96-4AFC-8092-B927B49E9762}.Release|x86.ActiveCfg = Release|Any CPU
 		{7093C5B2-0F96-4AFC-8092-B927B49E9762}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{96EBB8AD-5BB1-4AD2-A2CE-BEC073F104A4} = {DD377673-D7A6-48BA-8037-899D6079441B}
+		{B232EF9F-6487-44DB-B1C2-4D556CB8B6BF} = {DD377673-D7A6-48BA-8037-899D6079441B}
+		{CACA5330-4161-4F26-AB5C-2EFF398C5536} = {96EBB8AD-5BB1-4AD2-A2CE-BEC073F104A4}
+		{18691074-EB12-4169-A9FD-CDE14313AE61} = {B232EF9F-6487-44DB-B1C2-4D556CB8B6BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F20C27F5-93E6-441B-A1D1-DAD6507DF29D}
 	EndGlobalSection
 EndGlobal
