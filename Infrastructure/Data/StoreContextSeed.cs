@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+using Core.Entities;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -19,10 +19,12 @@ namespace Infrastructure.Data
                 {
                     var brandsData = File.ReadAllText("../Infrastructure/Data/SeedData/brands.json");
                     var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
+
                     foreach (var item in brands)
                     {
                         context.ProductBrands.Add(item);
                     }
+
                     await context.SaveChangesAsync();
                 }
 
@@ -30,10 +32,12 @@ namespace Infrastructure.Data
                 {
                     var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
                     var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
+
                     foreach (var item in types)
                     {
                         context.ProductTypes.Add(item);
                     }
+
                     await context.SaveChangesAsync();
                 }
 
@@ -41,17 +45,19 @@ namespace Infrastructure.Data
                 {
                     var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
                     var products = JsonSerializer.Deserialize<List<Product>>(productsData);
+
                     foreach (var item in products)
                     {
                         context.Products.Add(item);
                     }
+
                     await context.SaveChangesAsync();
                 }
             }
             catch (Exception ex)
             {
                 var logger = loggerFactory.CreateLogger<StoreContextSeed>();
-                logger.LogError(ex, ex.Message);
+                logger.LogError(ex.Message);
             }
         }
     }

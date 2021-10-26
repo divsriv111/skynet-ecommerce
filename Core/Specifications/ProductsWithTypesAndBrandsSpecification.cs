@@ -1,10 +1,9 @@
-﻿using Core.Entities;
+using Core.Entities;
 
 namespace Core.Specifications
 {
-    public class ProductsWithTypesAndBrandsSpecification : BaseSpecification<Product>
+    public class ProductsWithTypesAndBrandsSpecification : BaseSpecifcation<Product>
     {
-
         public ProductsWithTypesAndBrandsSpecification()
         {
             AddInclude(x => x.ProductType);

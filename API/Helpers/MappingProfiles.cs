@@ -1,12 +1,12 @@
-﻿using API.Dtos;
+using API.Dtos;
 using AutoMapper;
 using Core.Entities;
 
 namespace API.Helpers
 {
-    public class MappingProfile : Profile
+    public class MappingProfiles : Profile
     {
-        public MappingProfile()
+        public MappingProfiles()
         {
             CreateMap<Product, ProductToReturnDto>()
                 .ForMember(d => d.ProductBrand, o => o.MapFrom(s => s.ProductBrand.Name))
